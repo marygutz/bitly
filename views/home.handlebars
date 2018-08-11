@@ -1,0 +1,31 @@
+<h1 class="text-center">Link Shortyfier</h1>
+<p class="text-center"><i>A bitly clone built with nodejs</i></p>
+{{#if derp}}
+	<p>{{derp}}</p>
+{{else if shortylink}}
+    <blockquote class="blockquote text-center">
+    <p">Your shortylink is:<br>
+    <kbd>{{shortylink}}</kbd></p>
+    <button class="button btn-info" id="btn" data-clipboard-text="{{shortylink}}"><span>Copy</span></button> or
+    <a class="button btn-info" href="{{shortylink}}" style="padding: 6px 7px 7px;" target="_blank">View in browser</a><br>
+    <span id="status"></span>
+    </blockquote>
+    <script>
+    var btn = document.getElementById('btn');
+    var clipboard = new ClipboardJS(btn);
+    clipboard.on('success', function(e) {
+        document.getElementById('status').innerHTML = "Copied. Huzzah!";
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+{{/if}}
+
+<form method="post" action="/">
+<div class="form-group">
+<input type="text" class="form-control" id="url" name="urlToShorten" placeholder="Enter url to shorten">
+</div>
+<button type="submit" class="btn btn-primary center-block">Shortify</button>
+</form>
