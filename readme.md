@@ -9,11 +9,11 @@ A nifty little tool to turn long, ugly urls into something shorter and sweeter.
 
 ## Basic usage
 
-add valid uri using protocol prefix
-submit
-get shoritfied uri
-click to copy
-paste to anywhere and enjoy
+* add valid uri using protocol prefix
+* submit
+* get shoritfied uri
+* click to copy
+* paste to anywhere and enjoy
 
 ## Install and run
 
